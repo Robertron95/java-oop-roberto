@@ -13,15 +13,19 @@ public class Producto {
     private int unidades;
     private String fechaDeCaducidad;
 
+    private boolean disponible;
+
     public Producto() { }
 
-    public Producto(String nombre, double precio, categoria nombreCategoria, int unidades, String fechaDeCaducidad) {
+    public Producto(String nombre, double precio, categoria nombreCategoria, int unidades, String fechaDeCaducidad,
+                    boolean disponible) {
 
         this.nombre = nombre;
         this.precio = precio;
         this.nombreCategoria = nombreCategoria;
         this.unidades = unidades;
         this.fechaDeCaducidad = fechaDeCaducidad;
+        this.disponible = disponible;
     }
 
     public String getNombre() {
@@ -52,6 +56,7 @@ public class Producto {
         return unidades;
     }
 
+
     public void setUnidades(int unidades) {
         this.unidades = unidades;
     }
@@ -64,14 +69,23 @@ public class Producto {
         this.fechaDeCaducidad = fechaDeCaducidad;
     }
 
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
     @Override
     public String toString() {
         return "Producto{" +
                 "nombre='" + nombre + '\'' +
                 ", precio=" + precio +
-                ", categoria='" + nombreCategoria + '\'' +
+                ", nombreCategoria=" + nombreCategoria +
                 ", unidades=" + unidades +
-                ", fechaDeCaducidad=" + fechaDeCaducidad +
+                ", fechaDeCaducidad='" + fechaDeCaducidad + '\'' +
+                ", disponible=" + disponible +
                 '}';
     }
 }
