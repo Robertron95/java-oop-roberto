@@ -6,17 +6,20 @@ public class Producto {
 
     private String nombre;
     private double precio;
-    private String categoria;
+    public enum categoria { CARNE, LACTEOS, HUEVOS, PESCADOS, PANADERIA, ELECTRICIDAD, HIGIENE,
+    DROGUERIA, COSMETICA, FRUTAS, VERDURAS, HELADOS, APERITIVOS, GALLETAS, BEBIDAS, COLEGIO; }
+
+    private categoria nombreCategoria;
     private int unidades;
     private String fechaDeCaducidad;
 
     public Producto() { }
 
-    public Producto(String nombre, double precio, String categoria, int unidades, String fechaDeCaducidad) {
+    public Producto(String nombre, double precio, categoria nombreCategoria, int unidades, String fechaDeCaducidad) {
 
         this.nombre = nombre;
         this.precio = precio;
-        this.categoria = categoria;
+        this.nombreCategoria = nombreCategoria;
         this.unidades = unidades;
         this.fechaDeCaducidad = fechaDeCaducidad;
     }
@@ -37,12 +40,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public categoria getCategoria() {
+        return nombreCategoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategoria(categoria nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
     }
 
     public int getUnidades() {
@@ -66,7 +69,7 @@ public class Producto {
         return "Producto{" +
                 "nombre='" + nombre + '\'' +
                 ", precio=" + precio +
-                ", categoria='" + categoria + '\'' +
+                ", categoria='" + nombreCategoria + '\'' +
                 ", unidades=" + unidades +
                 ", fechaDeCaducidad=" + fechaDeCaducidad +
                 '}';

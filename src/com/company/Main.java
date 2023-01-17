@@ -5,11 +5,11 @@ public class Main  {
 
     public static void main(String[] args) {
 
-        Producto producto1 = new Producto("Lomo", 5.79, "Carnes", 1, "22-1-2023");
-        Producto producto2 = new Producto("Kéfir", 4.30, "Lácteos y huevos", 4, "18-2-2023");
-        Producto producto3 = new Producto("Bombilla", 7.99, "Electicidad", 2, "No tiene");
-        Producto producto4 = new Producto("Huevo", 2.02, "Lácteos y huevos", 1, "No tiene");
-        Producto producto5 = new Producto("Mascarillas", 1.00, "Higiene", 2, "1-1-2024");
+        Producto producto1 = new Producto("Lomo", 5.79, Producto.categoria.CARNE, 1, "22-1-2023");
+        Producto producto2 = new Producto("Kéfir", 4.30, Producto.categoria.LACTEOS, 4, "18-2-2023");
+        Producto producto3 = new Producto("Bombilla", 7.99, Producto.categoria.ELECTRICIDAD, 2, "No tiene");
+        Producto producto4 = new Producto("Huevo", 2.02, Producto.categoria.HUEVOS, 1, "No tiene");
+        Producto producto5 = new Producto("Mascarillas", 1.00, Producto.categoria.HIGIENE, 2, "1-1-2024");
 
         Producto[] arrayProductos = { producto1, producto2, producto3, producto4, producto5 };
 
