@@ -14,13 +14,27 @@ public class Main  {
         Producto[] arrayProductos = { producto1, producto2, producto3, producto4, producto5 };
 
         double precioTotal = 0.0;
+        double precioMaximo = 0.0;
+        double sumaTotal = 0.0;
+
 
         for (int i = 0; i <= arrayProductos.length - 1; i++) {
 
             precioTotal = precioTotal + arrayProductos[i].getPrecio() * arrayProductos[i].getUnidades();
 
+            if (arrayProductos[i].getPrecio() >= precioMaximo) {
+
+                precioMaximo = arrayProductos[i].getPrecio();
+            }
+
+            sumaTotal = sumaTotal + arrayProductos[i].getPrecio();
+
+
+
         }
 
         System.out.println(precioTotal);
+        System.out.println(precioMaximo);
+        System.out.println(sumaTotal/arrayProductos.length);
     }
 }
