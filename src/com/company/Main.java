@@ -36,5 +36,6 @@ public class Main  {
         System.out.println(precioTotal);
         System.out.println(precioMaximo);
         System.out.println(sumaTotal/arrayProductos.length);
+
     }
 }
