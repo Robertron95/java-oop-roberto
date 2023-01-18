@@ -1,6 +1,6 @@
 package com.company;
 
-public class Fabricante extends Producto {
+public class Fabricante {
 
     private String nombre;
     private String pais;
