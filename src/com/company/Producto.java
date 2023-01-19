@@ -12,6 +12,7 @@ public class Producto {
     private categoria nombreCategoria;
     private int unidades;
     private String fechaDeCaducidad;
+    
 
     private boolean disponible;
 
@@ -41,6 +42,7 @@ public class Producto {
     }
 
     public void setPrecio(double precio) {
+        if (precio >= 1.00)
         this.precio = precio;
     }
 
