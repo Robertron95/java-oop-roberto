@@ -41,7 +41,7 @@ public class Producto {
     }
 
     public void setPrecio(double precio) {
-        this.precio = precio;
+        if (precio >= 0.0) this.precio = precio;
     }
 
     public categoria getCategoria() {
