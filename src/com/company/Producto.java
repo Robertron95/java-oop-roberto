@@ -42,7 +42,6 @@ public class Producto {
     }
 
     public void setPrecio(double precio) {
-        if (precio >= 1.00)
         this.precio = precio;
     }
 
